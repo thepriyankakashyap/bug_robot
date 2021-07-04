@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<arg name="map_file" default="$(find bug_robot_description)/launch/world_map.yaml"/>
+
+	<arg name="open_rviz" default="true"/>
+
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+	<include file="$(find bug_robot_description)/navigation/launch/amcl.launch"/>
+
+	<node pkg="rviz" name="rviz" type="rviz" required="true" args="-d $(find bug_robot_description)/navigation/rviz/amcl.rviz"/>
+
+
+</launch>
