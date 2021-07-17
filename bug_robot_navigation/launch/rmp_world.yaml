@@ -1,4 +1,4 @@
-image: /home/shubhu/catkin_ws/src/rmp_bot_description/launch/rmp_world.pgm
+image: ./rmp_world.pgm
 resolution: 0.050000
 origin: [-100.000000, -100.000000, 0.000000]
 negate: 0
