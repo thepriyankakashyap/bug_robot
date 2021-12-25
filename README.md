@@ -19,7 +19,7 @@ Robot Drive Plugin Used - [Differential Drive - Gazebo](http://gazebosim.org/tut
 
 ## Fusion360 Model
 <div align="center">
-<img  alt="Fusion360 Model" width="70%" src="https://raw.githubusercontent.com/nilutpolkashyap/bug_robot/main/resources/bug_robot_render.png" />
+<img  alt="Fusion360 Model" width="70%" src="https://raw.githubusercontent.com/nilutpolkashyap/bug_robot/main/resources/bug_robot.png" />
 <br />
 </div>
 
