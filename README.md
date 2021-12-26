@@ -11,11 +11,15 @@ ____________________________________________________________________________
 ## Software Used
 - Fusion360 -> For designing the 3D Model of the robot.
 - [fusion2urdf](https://github.com/syuntoku14/fusion2urdf) -> Fusion360 script to export urdf from fusion 360 directly. 
-- ROS (Robot Operating System) 
+- ROS Melodic 
 - Gazebo 
 - Rviz 
+- Ubuntu 18.04
+
 
 Robot Drive Plugin Used - [Differential Drive - Gazebo](http://gazebosim.org/tutorials?tut=ros_gzplugins#DifferentialDrive)
+
+# **_bug_robot_description_** package
 
 ## Fusion360 Model
 <div align="center">
@@ -29,4 +33,13 @@ Robot Drive Plugin Used - [Differential Drive - Gazebo](http://gazebosim.org/tut
 <br />
 </div>
 
+## Bug World
+<div align="center">
+<img  alt="BUg World Image" width="70%" src="https://raw.githubusercontent.com/nilutpolkashyap/bug_robot/main/resources/bug_world.jpg" />
+<br />
+</div>
 
+# **_bug_robot_navigation_** package
+## **GMapping**
+
+## **Hector SLAM**
