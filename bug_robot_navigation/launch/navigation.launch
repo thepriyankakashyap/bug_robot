@@ -3,14 +3,14 @@
 <launch>
   <!-- Arguments -->
  
-  <arg name="map_file" default="$(find bug_robot_navigation)/maps/bug_world.yaml"/>  
+  <arg name="map_file" default="$(find bug_robot_description)/maps/hector_map.yaml"/>  
   <arg name="move_forward_only" default="true"/>
 
   <!-- Map server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- AMCL -->
-  <include file="$(find bug_robot_navigation)/launch/rmp_amcl.launch"/>
+  <include file="$(find bug_robot_navigation)/launch/amcl.launch"/>
 
   <!-- move_base -->
   <include file="$(find bug_robot_navigation)/launch/movebase.launch">    
