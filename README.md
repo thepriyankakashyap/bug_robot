@@ -6,11 +6,11 @@
 
 Clone this Repository - ``` git clone https://github.com/nilutpolkashyap/bug_robot.git ```
 ____________________________________________________________________________
-<div align="center">
+<!-- <div align="center">
 <a href="https://github.com/nilutpolkashyap">
   <img align="center" src="https://raw.githubusercontent.com/nilutpolkashyap/nilutpolkashyap/main/repo_about_me_card.png" alt="Nilutpol Kashyap" width="80%"/>
 </a>
-</div>
+</div> -->
 
 # **Details About Project**
 
