@@ -10,7 +10,7 @@ from std_srvs.srv import *
 
 import math
 
-active_ = False
+active_ = True
 pub_ = None
 regions_ = {
     'right': 0,
@@ -110,8 +110,7 @@ def turn_left():
 
 
 def follow_the_wall():
-    global regions_
-
+    # global regions_
     msg = Twist()
     msg.linear.x = 0.5
     return msg
@@ -141,7 +140,7 @@ def main():
             msg = turn_left()
         elif state_ == 2:
             msg = follow_the_wall()
-            pass
+            
         else:
             rospy.logerr('Unknown state!')
 
