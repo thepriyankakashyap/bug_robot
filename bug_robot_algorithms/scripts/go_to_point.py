@@ -10,7 +10,8 @@ from std_srvs.srv import *
 
 import math
 
-active_ = True
+active_ = False
+# active_ = True
 
 # robot state variables
 position_ = Point()
@@ -20,7 +21,7 @@ state_ = 0
 # goal
 desired_position_ = Point()
 desired_position_.x = 5  # rospy.get_param('des_pos_x')
-desired_position_.y = 8  # rospy.get_param('des_pos_y')
+desired_position_.y = 7  # rospy.get_param('des_pos_y')
 desired_position_.z = 0
 # parameters
 yaw_precision_ = math.pi / 90  # +/- 2 degree allowed

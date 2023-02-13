@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <!-- <arg name="des_x" />
+    <arg name="des_y" />
+    <param name="des_pos_x" value="$(arg des_x)" />
+    <param name="des_pos_y" value="$(arg des_y)" /> -->
+    <node pkg="bug_robot_algorithms" type="wall_following.py" name="wall_follower" />
+    <node pkg="bug_robot_algorithms" type="go_to_point.py" name="go_to_point" />
+    <node pkg="bug_robot_algorithms" type="bug0_algorithm.py" name="bug0" output="screen" />
+</launch>

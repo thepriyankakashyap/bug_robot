@@ -10,7 +10,7 @@ from std_srvs.srv import *
 
 import math
 
-active_ = True
+active_ = False  # True
 pub_ = None
 regions_ = {
     'right': 0,
@@ -140,7 +140,7 @@ def main():
             msg = turn_left()
         elif state_ == 2:
             msg = follow_the_wall()
-            
+
         else:
             rospy.logerr('Unknown state!')
 
