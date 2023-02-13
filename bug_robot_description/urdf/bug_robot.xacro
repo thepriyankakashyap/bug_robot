@@ -2,7 +2,7 @@
 <robot name="bug_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find bug_robot_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find bug_robot_description)/urdf/bug_robot.trans" />
+<!-- <xacro:include filename="$(find bug_robot_description)/urdf/bug_robot.trans" /> -->
 <xacro:include filename="$(find bug_robot_description)/urdf/bug_robot.gazebo" />
 <link name="base_link">
   <inertial>
@@ -15,7 +15,7 @@
     <geometry>
       <mesh filename="package://bug_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="orange"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -36,7 +36,7 @@
     <geometry>
       <mesh filename="package://bug_robot_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.055 0.085 -0.0325" rpy="0 0 0"/>
@@ -57,7 +57,7 @@
     <geometry>
       <mesh filename="package://bug_robot_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
   </visual>
   <collision>
     <origin xyz="0.055 -0.085 -0.0325" rpy="0 0 0"/>
@@ -78,54 +78,12 @@
     <geometry>
       <mesh filename="package://bug_robot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="red"/>
   </visual>
   <collision>
     <origin xyz="0.046503 -0.0 -0.1075" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://bug_robot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="camera_1">
-  <inertial>
-    <origin xyz="0.0 0.0 0.014999999999999993" rpy="0 0 0"/>
-    <mass value="0.28259999999999996"/>
-    <inertia ixx="0.000106" iyy="3.1e-05" izz="9.4e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.07 -0.0 -0.0575" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://bug_robot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.07 -0.0 -0.0575" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://bug_robot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="imu_1">
-  <inertial>
-    <origin xyz="-0.13 1.232595164407831e-33 0.0025000000000000022" rpy="0 0 0"/>
-    <mass value="0.0314"/>
-    <inertia ixx="4e-06" iyy="1e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.095 -0.0 -0.0525" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://bug_robot_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="-0.095 -0.0 -0.0525" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://bug_robot_description/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -148,18 +106,6 @@
   <origin xyz="-0.046503 0.0 0.1075" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="lidar_1"/>
-</joint>
-
-<joint name="camera_joint" type="fixed">
-  <origin xyz="0.07 0.0 0.0575" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="camera_1"/>
-</joint>
-
-<joint name="imu_joint" type="fixed">
-  <origin xyz="0.095 0.0 0.0525" rpy="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="imu_1"/>
 </joint>
 
 </robot>
