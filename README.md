@@ -8,6 +8,8 @@ ___________________________________________________________________________
 
 # **Details About Project**
 
+## Bug Algorithm Implementation ROS Simulation
+
 ## Software Used
 - Fusion360 -> For designing the 3D Model of the robot.
 - [fusion2urdf](https://github.com/syuntoku14/fusion2urdf) -> Fusion360 script to export urdf from fusion 360 directly. 
